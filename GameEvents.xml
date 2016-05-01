@@ -1,0 +1,448 @@
+<events type="GameEvent"> 
+  <event name="BuildFinished" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iPlotX"/>
+    <arg pos="3" type="int" name="iPlotY"/>
+    <arg pos="4" type="ImprovementTypes" name="eImprovement"/>
+  </event>
+  <event name="CanDeclareWar" type="All">
+    <arg pos="1" type="TeamTypes" name="eFromTeam"/>
+    <arg pos="2" type="TeamTypes" name="eToTeam"/>
+  </event>
+  <event name="CanDisplaceCivilian" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+  </event>
+  <event name="CanHaveAnyUpgrade" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+  </event>
+  <event name="CanHavePromotion" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="PromotionTypes" name="ePromotion"/>
+  </event>
+  <event name="CanHaveUpgrade" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="UnitClassTypes" name="eUnitClass"/>
+    <arg pos="4" type="UnitTypes" name="eUnit"/>
+  </event>
+  <event name="CanLoadAt" type="Any">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CannotParadropFrom" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanParadropFrom" type="Any">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanRaze" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+  </event>
+  <event name="CanRazeOverride" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+  </event>
+  <event name="CanRebaseInCity" type="Any">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanRebaseTo" type="Any">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanSaveUnit" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+  </event>
+  <event name="CanStartMission" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="MissionTypes" name="eMission"/>
+  </event>
+  <event name="CircumnavigatedGlobe" type="Hook">
+    <arg pos="1" type="TeamTypes" name="eTeam"/>
+  </event>
+  <event name="CityBoughtPlot" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="bool" name="bGold"/>
+    <arg pos="6" type="bool" name="bFaithOrCulture"/>
+  </event>
+  <event name="CityBuildingsIsBuildingSellable" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="BuildingTypes" name="eBuilding"/>
+  </event>
+  <event name="CityCanAcquirePlot" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CityCanBuyAnyPlot" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+  </event>
+  <event name="CityCanBuyPlot" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CityCanConstruct" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="BuildingTypes" name="eBuilding"/>
+  </event>
+  <event name="CityCanCreate" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="ProjectTypes" name="eProject"/>
+  </event>
+  <event name="CityCanMaintain" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="ProcessTypes" name="eProcess"/>
+  </event>
+  <event name="CityCanPrepare" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="SpecialistTypes" name="eSpecialist"/>
+  </event>
+  <event name="CityCanTrain" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="UnitTypes" name="eUnit"/>
+  </event>
+  <event name="CityCaptureComplete" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="eOldPlayer"/>
+    <arg pos="2" type="bool" name="bCapital"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="int" name="eNewPlayer"/>
+    <arg pos="6" type="int" name="iOldPop"/>
+    <arg pos="7" type="bool" name="bConquest"/>
+    <arg pos="8" type="int" name="iGreatWorkCount">
+	  <!-- Appears to be a duplicate of param 9, just obtained a different way -->
+	</arg>
+    <arg pos="9" type="int" name="iGreatWorkCount">
+	  <!-- Appears to be a duplicate of param 8, just obtained a different way -->
+	</arg>
+  </event>
+  <event name="CityConstructed" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="BuildingTypes" name="eBuilding"/>
+    <arg pos="4" type="bool" name="bGold"/>
+    <arg pos="5" type="bool" name="bFaithOrCulture"/>
+  </event>
+  <event name="CityConvertsReligion" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="ReligionTypes" name="eReligion"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CityCreated" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="ProjectTypes" name="eProject"/>
+    <arg pos="4" type="bool" name="bGold"/>
+    <arg pos="5" type="bool" name="bFaithOrCulture"/>
+  </event>
+  <event name="CitySoldBuilding" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="BuildingTypes" name="eBuilding"/>
+  </event>
+  <event name="CityStrategyCanActivate" type="All">
+    <arg pos="1" type="StrategyTypes" name="eStrategy"/>
+    <arg pos="2" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="3" type="int" name="iCity"/>
+  </event>
+  <event name="CityTrained" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="UnitTypes" name="eUnit"/>
+    <arg pos="4" type="bool" name="bGold"/>
+    <arg pos="5" type="bool" name="bFaithOrCulture"/>
+  </event>
+  <event name="DeclareWar" type="Hook">
+    <arg pos="1" type="TeamTypes" name="eFromTeam"/>
+    <arg pos="2" type="TeamTypes" name="eToTeam"/>
+  </event>
+  <event name="EconomicStrategyCanActivate" type="All">
+    <arg pos="1" type="StrategyTypes" name="eStrategy"/>
+    <arg pos="2" type="PlayerTypes" name="ePlayer"/>
+  </event>
+  <event name="GameCoreTestVictory" type="Hook">
+  </event>
+  <event name="GameCoreUpdateBegin" type="Hook">
+  </event>
+  <event name="GameCoreUpdateEnd" type="Hook">
+  </event>
+  <event name="GatherPerTurnReplayStats" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+  </event>
+  <event name="GetFounderBenefitsReligion" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+  </event>
+  <event name="GetReligionToFound" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="ReligionTypes" name="eReligion"/>
+    <arg pos="3" type="bool" name="bAlreadyFounded"/>
+  </event>
+  <event name="GetReligionToSpread" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+  </event>
+  <event name="GetScenarioDiploModifier1" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="eFromPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="eToPlayer"/>
+  </event>
+  <event name="GetScenarioDiploModifier2" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="eFromPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="eToPlayer"/>
+  </event>
+  <event name="GetScenarioDiploModifier3" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="eFromPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="eToPlayer"/>
+  </event>
+  <event name="GoodyHutCanResearch" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="TechTypes" name="eTech"/>
+  </event>
+  <event name="GoodyHutTechResearched" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="TechTypes" name="eTech"/>
+  </event>
+  <event name="GreatPersonExpended" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="UnitTypes" name="eUnit"/>
+  </event>
+  <event name="IsAbleToMakePeace" type="All">
+    <arg pos="1" type="PlayerTypes" name="eFromPlayer"/>
+    <arg pos="2" type="TeamTypes" name="eToTeam"/>
+  </event>
+  <event name="MakePeace" type="Hook">
+    <arg pos="1" type="TeamTypes" name="eFromTeam"/>
+    <arg pos="2" type="TeamTypes" name="eToTeam"/>
+  </event>
+  <event name="MilitaryStrategyCanActivate" type="All">
+    <arg pos="1" type="StrategyTypes" name="eStrategy"/>
+    <arg pos="2" type="PlayerTypes" name="ePlayer"/>
+  </event>
+  <event name="MinorAlliesChanged" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="eCS"/>
+    <arg pos="2" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="3" type="bool" name="bGainedLost"/>
+    <arg pos="4" type="int" name="iOldValue"/>
+    <arg pos="5" type="int" name="iNewValue"/>
+  </event>
+  <event name="MinorFriendsChanged" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="eCS"/>
+    <arg pos="2" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="3" type="bool" name="bGainedLost"/>
+    <arg pos="4" type="int" name="iOldValue"/>
+    <arg pos="5" type="int" name="iNewValue"/>
+  </event>
+  <event name="NaturalWonderDiscovered" type="Hook">
+    <arg pos="1" type="TeamTypes" name="eTeam"/>
+    <arg pos="2" type="FeatureTypes" name="eFeature"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="bool" name="bFirst"/>
+  </event>
+  <event name="NuclearDetonation" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iPlotX"/>
+    <arg pos="3" type="int" name="iPlotY"/>
+    <arg pos="4" type="bool" name="bWar"/>
+    <arg pos="5" type="bool" name="bBystander"/>
+  </event>
+  <event name="PantheonFounded" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="ReligionTypes" name="eReligion">
+	  <!-- Will always be GameInfoTypes.RELIGION_PANTHEON -->
+	</arg>
+    <arg pos="4" type="BeliefTypes" name="eBelief"/>
+  </event>
+  <event name="ParadropAt" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iFromPlotX"/>
+    <arg pos="4" type="int" name="iFromPlotY"/>
+    <arg pos="5" type="int" name="iToPlotX"/>
+    <arg pos="6" type="int" name="iToPlotY"/>
+  </event>
+  <event name="PlayerAdoptPolicy" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="PolicyTypes" name="ePolicy"/>
+  </event>
+  <event name="PlayerAdoptPolicyBranch" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="PolicyBranchTypes" name="ePolicyBranch"/>
+  </event>
+  <event name="PlayerCanAdoptPolicy" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="PolicyTypes" name="ePolicy"/>
+  </event>
+  <event name="PlayerCanAdoptPolicyBranch" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="PolicyBranchTypes" name="ePolicyBranch"/>
+  </event>
+  <event name="PlayerCanConstruct" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="BuildingTypes" name="eBuilding"/>
+  </event>
+  <event name="PlayerCanCreate" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="ProjectTypes" name="eProject"/>
+  </event>
+  <event name="PlayerCanEverResearch" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="TechTypes" name="eTech"/>
+  </event>
+  <event name="PlayerCanFoundPantheon" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+  </event>
+  <event name="PlayerCanFoundReligion" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+  </event>
+  <event name="PlayerCanMaintain" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="ProcessTypes" name="eProcess"/>
+  </event>
+  <event name="PlayerCanPrepare" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="SpecialistTypes" name="eSpecialist"/>
+  </event>
+  <event name="PlayerCanResearch" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="TechTypes" name="eTech"/>
+  </event>
+  <event name="PlayerCanTrain" type="All">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="UnitTypes" name="eUnit"/>
+  </event>
+  <event name="PlayerCityFounded" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iPlotX"/>
+    <arg pos="3" type="int" name="iPlotY"/>
+  </event>
+  <event name="PlayerDoTurn" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+  </event>
+  <event name="PlayerPreAIUnitUpdate" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+  </event>
+  <event name="RebaseTo" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="ReligionEnhanced" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="ReligionTypes" name="eReligion"/>
+    <arg pos="3" type="BeliefTypes" name="eBelief"/>
+    <arg pos="4" type="BeliefTypes" name="eBelief"/>
+  </event>
+  <event name="ReligionFounded" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="ReligionTypes" name="eReligion"/>
+    <arg pos="4" type="BeliefTypes" name="eBelief"/>
+    <arg pos="5" type="BeliefTypes" name="eBelief"/>
+    <arg pos="6" type="BeliefTypes" name="eBelief"/>
+    <arg pos="7" type="BeliefTypes" name="eBelief"/>
+    <arg pos="8" type="BeliefTypes" name="eBelief"/>
+  </event>
+  <event name="SetAlly" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="eCS"/>
+    <arg pos="2" type="PlayerTypes" name="eOldAlly"/>
+    <arg pos="3" type="PlayerTypes" name="eNewAlly"/>
+  </event>
+  <event name="SetPopulation" type="Hook">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="int" name="iOldValue"/>
+    <arg pos="4" type="int" name="iNewValue"/>
+  </event>
+  <event name="TeamMeet" type="Hook">
+    <arg pos="1" type="TeamTypes" name="eToTeam"/>
+    <arg pos="2" type="TeamTypes" name="eFromTeam"/>
+  </event>
+  <event name="TeamSetEra" type="Hook">
+    <arg pos="1" type="TeamTypes" name="eTeam"/>
+    <arg pos="2" type="EraTypes" name="eEra"/>
+  </event>
+  <event name="TeamSetHasTech" type="Hook">
+    <arg pos="1" type="TeamTypes" name="eTeam"/>
+    <arg pos="2" type="TechTypes" name="eTech"/>
+    <arg pos="3" type="bool" name="bValue"/>
+  </event>
+  <event name="TeamTechResearched" type="Hook">
+    <arg pos="1" type="TeamTypes" name="eTeam"/>
+    <arg pos="2" type="TechTypes" name="eTech"/>
+    <arg pos="3" type="int" name="iChange"/>
+  </event>
+  <event name="UiDiploEvent" type="Hook">
+    <arg pos="1" type="EventTypes" name="eEvent"/>
+    <arg pos="2" type="PlayerTypes" name="eToPlayer"/>
+    <arg pos="3" type="int" name="iData1"/>
+    <arg pos="4" type="int" name="iData2"/>
+  </event>
+  <event name="UnitGetSpecialExploreTarget" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+  </event>
+  <event name="UnitKilledInCombat" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="PlayerTypes" name="eKilledPlayer"/>
+    <arg pos="3" type="KilledUnitTypes" name="eKilledUnit"/>
+  </event>
+  <event name="UnitPrekill" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="UnitTypes" name="eUnit"/>
+    <arg pos="4" type="int" name="iPlotX"/>
+    <arg pos="5" type="int" name="iPlotY"/>
+    <arg pos="6" type="bool" name="bDelay"/>
+    <arg pos="7" type="PlayerTypes" name="eByPlayer"/>
+  </event>
+  <event name="UnitPromoted" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="PromotionTypes" name="ePromotion"/>
+  </event>
+  <event name="UnitSetXY" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="UnitUpgraded" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iNewUnit"/>
+    <arg pos="4" type="bool" name="bGoodyHut"/>
+  </event>
+</events>

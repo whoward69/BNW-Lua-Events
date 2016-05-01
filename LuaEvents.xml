@@ -1,0 +1,59 @@
+<events type="LuaEvent"> 
+  <event name="AdditionalInformationDropdownGatherEntries" type="Hook">
+    <arg pos="1" type="table" name="entries"/>
+  </event>
+  <event name="AdditionalInformationDropdownSortEntries" type="Hook">
+    <arg pos="1" type="table" name="entries"/>
+  </event>
+  <event name="AdvisorButtonEvent" type="Hook">
+    <arg pos="1" type="MouseClickTypes" name="button"/>
+  </event>
+  <event name="ChatShow" type="Hook">
+    <arg pos="1" type="boolean" name="bChatOpen"/>
+  </event>
+  <event name="EnemyPanelHide" type="Hook">
+    <arg pos="1" type="boolean" name="bIsEnemyPanelHide"/>
+  </event>
+  <event name="ModBrowserSetDeleteButtonState" type="Hook">
+    <arg pos="1" type="boolean" name="bVisible"/>
+    <arg pos="2" type="boolean" name="bEnabled"/>
+    <arg pos="3" type="string" name="sCaption"/>
+    <arg pos="4" type="string" name="sTooltip"/>
+  </event>
+  <event name="OnModBrowserDeleteButtonClicked" type="Hook"/>
+  <event name="OnModsBrowserNavigateBack" type="Hook">
+    <arg pos="1" type="table" name="args"/>
+  </event>
+  <event name="OnRecommendationCheckChanged" type="Hook">
+    <arg pos="1" type="boolean" name="bHideRecommendations"/>
+  </event>
+  <event name="OpenAILeaderDiploTrade" type="Hook"/>
+  <event name="OpenSimpleDiploTrade" type="Hook"/>
+  <event name="PasswordChanged" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+  </event>
+  <event name="ProductionPopup" type="Hook">
+    <arg pos="1" type="boolean" name="bHide"/>
+  </event>
+  <event name="ReplayViewer_LoadReplay" type="Hook">
+    <arg pos="1" type="unknown" name="file"/>
+  </event>
+  <event name="RequestRefreshAdditionalInformationDropdownEntries" type="Hook"/>
+  <event name="SetCivNameEditSlot" type="Hook">
+    <arg pos="1" type="int" name="iSlot"/>
+  </event>
+  <event name="SetKickPlayer" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="ePlayer"/>
+    <arg pos="2" type="string" name="sName"/>
+  </event>
+  <event name="ShowScoreList" type="Hook">
+    <arg pos="1" type="boolean" name="bShow"/>
+  </event>
+  <event name="TryDismissTutorial" type="Hook">
+    <arg pos="1" type="int" name="iTutorial"/>
+  </event>
+  <event name="TryQueueTutorial" type="Hook">
+    <arg pos="1" type="int" name="iTutorial"/>
+    <arg pos="2" type="notnil" name="highPriority"/>
+  </event>
+</events>
