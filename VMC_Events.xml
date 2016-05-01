@@ -1,0 +1,855 @@
+<events type="GameEvent"> 
+  <event name="AiOverrideChooseNextTech" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="bool" name="bFreeTech"/>
+  </event>
+  <event name="AreaCanHaveAnyResource" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iArea"/>
+  </event>
+  <event name="BarbariansCampCanSpawnUnit" type="All">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+  </event>
+  <event name="BarbariansCampCleared" type="Hook">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="PlayerTypes" name="iPlayer"/>
+  </event>
+  <event name="BarbariansCampFounded" type="Hook">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+  </event>
+  <event name="BarbariansCampGetSpawnUnit" type="Acc">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="UnitTypes" name="iPrefUnitType"/>
+  </event>
+  <event name="BarbariansCanFoundCamp" type="All">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+  </event>
+  <event name="BarbariansSpawnedUnit" type="Hook">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="UnitTypes" name="iUnitType"/>
+  </event>
+  <event name="BattleDamageDelta" type="Acc">
+    <arg pos="1" type="int" name="iRole"/>
+    <arg pos="2" type="int" name="iBaseDamage"/>
+  </event>
+  <event name="BattleFinished" type="Hook">
+  </event>
+  <event name="BattleJoined" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnitOrCity"/>
+    <arg pos="3" type="int" name="iRole"/>
+    <arg pos="4" type="bool" name="bIsCity"/>
+  </event>
+  <event name="BattleStarted" type="Hook">
+    <arg pos="1" type="int" name="iType"/>
+    <arg pos="2" type="int" name="iPlotX"/>
+    <arg pos="3" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanAirliftFrom" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanAirliftTo" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanDoCommand" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="CommandTypes" name="iCommand"/>
+    <arg pos="4" type="int" name="iData1"/>
+    <arg pos="5" type="int" name="iData2"/>
+    <arg pos="6" type="int" name="iPlotX"/>
+    <arg pos="7" type="int" name="iPlotY"/>
+    <arg pos="8" type="bool" name="bTestVisible"/>
+  </event>
+  <event name="CanHaveAnyUpgrade" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+  </event>
+  <event name="CanHavePromotion" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="PromotionTypes" name="iPromotionType"/>
+  </event>
+  <event name="CanHaveUpgrade" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="UnitClassTypes" name="iUnitClassType"/>
+    <arg pos="4" type="UnitTypes" name="iUnitType"/>
+  </event>
+  <event name="CanLoadAt" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanMoveInto" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="bool" name="bAttack"/>
+    <arg pos="6" type="bool" name="bDeclareWar"/>
+  </event>
+  <event name="CannotParadropFrom" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanParadropFrom" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanRebaseInCity" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CanRebaseTo" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="bool" name="bIsCity"/>
+  </event>
+  <event name="CapitalChanged" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iNewCapital"/>
+    <arg pos="3" type="int" name="iOldCapital"/>
+  </event>
+  <event name="CircumnavigatedGlobe" type="Hook">
+    <arg pos="1" type="TeamTypes" name="iTeam"/>
+  </event>
+  <event name="CityBoughtPlot" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="bool" name="bGold"/>
+    <arg pos="6" type="bool" name="bCulture"/>
+  </event>
+  <event name="CityCanAcquirePlot" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="CityCanAirlift" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+  </event>
+  <event name="CityConnected" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCityX"/>
+    <arg pos="3" type="int" name="iCityY"/>
+    <arg pos="4" type="int" name="iToCityX"/>
+    <arg pos="5" type="int" name="iToCityY"/>
+    <arg pos="6" type="bool" name="bDomestic"/>
+  </event>
+  <event name="CityConnections" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="bool" name="bDomestic"/>
+  </event>
+  <event name="CityConstructed" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="BuildingTypes" name="iBuilding"/>
+    <arg pos="4" type="bool" name="bGold"/>
+    <arg pos="5" type="bool" name="bFaith"/>
+  </event>
+  <event name="CityCreated" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="ProjectTypes" name="iProject"/>
+    <arg pos="4" type="bool" name="bGold"/>
+    <arg pos="5" type="bool" name="bFaith"/>
+  </event>
+  <event name="CityPrepared" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="SpecialistTypes" name="iSpecialist"/>
+    <arg pos="4" type="bool" name="bGold"/>
+    <arg pos="5" type="bool" name="bFaith"/>
+  </event>
+  <event name="CitySoldBuilding" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="BuildingTypes" name="iBuilding"/>
+  </event>
+  <event name="CityTrained" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+    <arg pos="3" type="int" name="iUnit"/>
+    <arg pos="4" type="bool" name="bGold"/>
+    <arg pos="5" type="bool" name="bFaith"/>
+  </event>
+  <event name="CombatEnded" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iAttackingPlayer"/>
+    <arg pos="2" type="int" name="iAttackingUnit"/>
+    <arg pos="3" type="int" name="iAttackerDamage"/>
+    <arg pos="4" type="int" name="iAttackerFinalDamage"/>
+    <arg pos="5" type="int" name="iAttackerMaxHP"/>
+    <arg pos="6" type="PlayerTypes" name="iDefendingPlayer"/>
+    <arg pos="7" type="int" name="iDefendingUnit"/>
+    <arg pos="8" type="int" name="iDefenderDamage"/>
+    <arg pos="9" type="int" name="iDefenderFinalDamage"/>
+    <arg pos="10" type="int" name="iDefenderMaxHP"/>
+    <arg pos="11" type="PlayerTypes" name="iInterceptingPlayer"/>
+    <arg pos="12" type="int" name="iInterceptingUnit"/>
+    <arg pos="13" type="int" name="iInterceptorDamage"/>
+    <arg pos="14" type="int" name="iPlotX"/>
+    <arg pos="15" type="int" name="iPlotY"/>
+  </event>
+  <event name="CombatResult" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iAttackingPlayer"/>
+    <arg pos="2" type="int" name="iAttackingUnit"/>
+    <arg pos="3" type="int" name="iAttackerDamage"/>
+    <arg pos="4" type="int" name="iAttackerFinalDamage"/>
+    <arg pos="5" type="int" name="iAttackerMaxHP"/>
+    <arg pos="6" type="PlayerTypes" name="iDefendingPlayer"/>
+    <arg pos="7" type="int" name="iDefendingUnit"/>
+    <arg pos="8" type="int" name="iDefenderDamage"/>
+    <arg pos="9" type="int" name="iDefenderFinalDamage"/>
+    <arg pos="10" type="int" name="iDefenderMaxHP"/>
+    <arg pos="11" type="PlayerTypes" name="iInterceptingPlayer"/>
+    <arg pos="12" type="int" name="iInterceptingUnit"/>
+    <arg pos="13" type="int" name="iInterceptorDamage"/>
+    <arg pos="14" type="int" name="iPlotX"/>
+    <arg pos="15" type="int" name="iPlotY"/>
+  </event>
+  <event name="CustomMissionCompleted" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="MissionTypes" name="iMission"/>
+    <arg pos="4" type="int" name="iData1"/>
+    <arg pos="5" type="int" name="iData2"/>
+    <arg pos="6" type="int" name="iFlags"/>
+    <arg pos="7" type="int" name="iTurn"/>
+  </event>
+  <event name="CustomMissionCycleTime" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="MissionTypes" name="iMission"/>
+    <arg pos="4" type="int" name="iData1"/>
+    <arg pos="5" type="int" name="iData2"/>
+    <arg pos="6" type="int" name="iFlags"/>
+    <arg pos="7" type="int" name="iTurn"/>
+  </event>
+  <event name="CustomMissionDoStep" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="MissionTypes" name="iMission"/>
+    <arg pos="4" type="int" name="iData1"/>
+    <arg pos="5" type="int" name="iData2"/>
+    <arg pos="6" type="int" name="iFlags"/>
+    <arg pos="7" type="int" name="iTurn"/>
+  </event>
+  <event name="CustomMissionPossible" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="MissionTypes" name="iMission"/>
+    <arg pos="4" type="int" name="iData1"/>
+    <arg pos="5" type="int" name="iData2"/>
+    <arg pos="6" type="int" name="iFlags"/>
+    <arg pos="7" type="int" name="iTurn"/>
+    <arg pos="8" type="int" name="iPlotX"/>
+    <arg pos="9" type="int" name="iPlotY"/>
+    <arg pos="10" type="bool" name="bTestVisible"/>
+  </event>
+  <event name="CustomMissionSetActivity" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="MissionTypes" name="iMission"/>
+    <arg pos="4" type="int" name="iData1"/>
+    <arg pos="5" type="int" name="iData2"/>
+    <arg pos="6" type="int" name="iFlags"/>
+    <arg pos="7" type="int" name="iTurn"/>
+  </event>
+  <event name="CustomMissionStart" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="MissionTypes" name="iMission"/>
+    <arg pos="4" type="int" name="iData1"/>
+    <arg pos="5" type="int" name="iData2"/>
+    <arg pos="6" type="int" name="iFlags"/>
+    <arg pos="7" type="int" name="iTurn"/>
+  </event>
+  <event name="CustomMissionTargetPlot" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="MissionTypes" name="iMission"/>
+    <arg pos="4" type="int" name="iData1"/>
+    <arg pos="5" type="int" name="iData2"/>
+    <arg pos="6" type="int" name="iFlags"/>
+    <arg pos="7" type="int" name="iTurn"/>
+  </event>
+  <event name="CustomMissionTimerInc" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="MissionTypes" name="iMission"/>
+    <arg pos="4" type="int" name="iData1"/>
+    <arg pos="5" type="int" name="iData2"/>
+    <arg pos="6" type="int" name="iFlags"/>
+    <arg pos="7" type="int" name="iTurn"/>
+  </event>
+  <event name="DeclareWar" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="TeamTypes" name="iAgainstTeam"/>
+    <arg pos="3" type="bool" name="bAggressor"/>
+  </event>
+  <event name="DiplomacyStfu" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iAI"/>
+    <arg pos="2" type="int" name="iResponseType"/>
+    <arg pos="3" type="int" name="iDiploMessage"/>
+    <arg pos="4" type="int" name="iDiploUIState"/>
+    <arg pos="5" type="int" name="iAction"/>
+    <arg pos="6" type="int" name="iExtraData"/>
+  </event>
+  <event name="EspionageCanMoveSpyTo" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCityOwner"/>
+    <arg pos="3" type="int" name="iCity"/>
+  </event>
+  <event name="EspionageCanStageCoup" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCityOwner"/>
+    <arg pos="3" type="int" name="iCity"/>
+  </event>
+  <event name="EspionageResult" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iSpy"/>
+    <arg pos="3" type="int" name="iResult"/>
+    <arg pos="4" type="int" name="iCityX"/>
+    <arg pos="5" type="int" name="iCityY"/>
+  </event>
+  <event name="EspionageState" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iSpy"/>
+    <arg pos="3" type="int" name="iState"/>
+    <arg pos="4" type="int" name="iCityX"/>
+    <arg pos="5" type="int" name="iCityY"/>
+  </event>
+  <event name="GetBombardRange" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+  </event>
+  <event name="GetDiploModifier" type="Acc">
+    <arg pos="1" type="int" name="iEvent"/>
+    <arg pos="2" type="PlayerTypes" name="iFromPlayer"/>
+    <arg pos="3" type="PlayerTypes" name="iToPlayer"/>
+  </event>
+  <event name="GetReligionToFound" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="ReligionTypes" name="iPreferredReligion"/>
+    <arg pos="3" type="bool" name="bIsAlreadyFounded"/>
+  </event>
+  <event name="GoodyHutCanNotReceive" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="GoodyTpes" name="iGoody"/>
+    <arg pos="4" type="bool" name="bPick"/>
+  </event>
+  <event name="GoodyHutCanResearch" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="TechTypes" name="iTech"/>
+  </event>
+  <event name="GoodyHutTechResearched" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="TechTypes" name="iTech"/>
+  </event>
+  <event name="GreatPersonExpended" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="UnitTypes" name="iUnitType"/>
+    <arg pos="4" type="int" name="iPlotX"/>
+    <arg pos="5" type="int" name="iPlotY"/>
+  </event>
+  <event name="IsAbleToDeclareWar" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="TeamTypes" name="iAgainstTeam"/>
+  </event>
+  <event name="IsAbleToMakePeace" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="TeamTypes" name="iAgainstTeam"/>
+  </event>
+  <event name="MakePeace" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="TeamTypes" name="iAgainstTeam"/>
+    <arg pos="3" type="bool" name="bPacifier"/>
+  </event>
+  <event name="MinorAlliesChanged" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iMinor"/>
+    <arg pos="2" type="PlayerTypes" name="iMajor"/>
+    <arg pos="3" type="bool" name="bIsAlly"/>
+    <arg pos="4" type="int" name="iOldFriendship"/>
+    <arg pos="5" type="int" name="iNewFriendship"/>
+  </event>
+  <event name="MinorFriendsChanged" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iMinor"/>
+    <arg pos="2" type="PlayerTypes" name="iMajor"/>
+    <arg pos="3" type="bool" name="bIsFriend"/>
+    <arg pos="4" type="int" name="iOldFriendship"/>
+    <arg pos="5" type="int" name="iNewFriendship"/>
+  </event>
+  <event name="MinorGift" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iMinor"/>
+    <arg pos="2" type="PlayerTypes" name="iMajor"/>
+    <arg pos="3" type="int" name="iGift"/>
+    <arg pos="4" type="int" name="iFriendshipBoost"/>
+    <arg pos="5" type="int" name="0"/>
+    <arg pos="6" type="bool" name="bFirstMajorCiv"/>
+    <arg pos="7" type="bool" name="false"/>
+    <arg pos="8" type="string" name="szTxtKeySuffix"/>
+  </event>
+  <event name="MustAbortAttack" type="All">
+    <arg pos="1" type="PlayerTypes" name="iAttackingPlayer"/>
+    <arg pos="2" type="int" name="iAttackingUnit"/>
+    <arg pos="3" type="int" name="iAttackerDamage"/>
+    <arg pos="4" type="int" name="iAttackerFinalDamage"/>
+    <arg pos="5" type="int" name="iAttackerMaxHP"/>
+    <arg pos="6" type="PlayerTypes" name="iDefendingPlayer"/>
+    <arg pos="7" type="int" name="iDefendingUnit"/>
+    <arg pos="8" type="int" name="iDefenderDamage"/>
+    <arg pos="9" type="int" name="iDefenderFinalDamage"/>
+    <arg pos="10" type="int" name="iDefenderMaxHP"/>
+    <arg pos="11" type="PlayerTypes" name="iInterceptingPlayer"/>
+    <arg pos="12" type="int" name="iInterceptingUnit"/>
+    <arg pos="13" type="int" name="iInterceptorDamage"/>
+    <arg pos="14" type="int" name="iPlotX"/>
+    <arg pos="15" type="int" name="iPlotY"/>
+  </event>
+  <event name="NaturalWonderDiscovered" type="Hook">
+    <arg pos="1" type="TeamTypes" name="iTeam"/>
+    <arg pos="2" type="FeatureTypes" name="iFeature"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="bool" name="bFirst"/>
+  </event>
+  <event name="NuclearDetonation" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iPlotX"/>
+    <arg pos="3" type="int" name="iPlotY"/>
+    <arg pos="4" type="bool" name="bWar"/>
+    <arg pos="5" type="bool" name="bBystanders"/>
+  </event>
+  <event name="PantheonFounded" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCapitalCity"/>
+    <arg pos="3" type="ReligionTypes" name="iReligion"/>
+    <arg pos="4" type="BeliefTypes" name="iBelief1"/>
+  </event>
+  <event name="ParadropAt" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iFromX"/>
+    <arg pos="4" type="int" name="iFromY"/>
+    <arg pos="5" type="int" name="iToX"/>
+    <arg pos="6" type="int" name="iToY"/>
+  </event>
+  <event name="PlaceResource" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="ResourceTypes" name="iResource"/>
+    <arg pos="3" type="int" name="iCount"/>
+    <arg pos="4" type="int" name="iPlotX"/>
+    <arg pos="5" type="int" name="iPlotY"/>
+  </event>
+  <event name="PlayerBoughtOut" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+  </event>
+  <event name="PlayerBuilding" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="BuildTypes" name="iBuild"/>
+    <arg pos="6" type="bool" name="bStarting"/>
+  </event>
+  <event name="PlayerBuilt" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="BuildTypes" name="iBuild"/>
+  </event>
+  <event name="PlayerBullied" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+    <arg pos="3" type="int" name="iGold"/>
+    <arg pos="4" type="UnitTypes" name="iUnitType"/>
+    <arg pos="5" type="int" name="iPlotX"/>
+    <arg pos="6" type="int" name="iPlotY"/>
+  </event>
+  <event name="PlayerCanAdoptIdeology" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PolicyBrancyTypes" name="iIdeology"/>
+  </event>
+  <event name="PlayerCanAdoptTenet" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PolicyTypes" name="iTenet"/>
+  </event>
+  <event name="PlayerCanBuild" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="BuildTypes" name="iBuild"/>
+  </event>
+  <event name="PlayerCanBullyGold" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+  </event>
+  <event name="PlayerCanBullyUnit" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+  </event>
+  <event name="PlayerCanBuyOut" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+  </event>
+  <event name="PlayerCanCreateTradeRoute" type="All">
+    <arg pos="1" type="PlayerTypes" name="iFromPlayer"/>
+    <arg pos="2" type="int" name="iFromCity"/>
+    <arg pos="3" type="PlayerTypes" name="iToPlayer"/>
+    <arg pos="4" type="int" name="iToCity"/>
+    <arg pos="5" type="DomainTypes" name="iDomain"/>
+    <arg pos="6" type="int" name="iConnectionType"/>
+  </event>
+  <event name="PlayerCanDeclareWar" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="TeamTypes" name="iAgainstTeam"/>
+  </event>
+  <event name="PlayerCanFoundCity" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iPlotX"/>
+    <arg pos="3" type="int" name="iPlotY"/>
+  </event>
+  <event name="PlayerCanFoundCityRegardless" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iPlotX"/>
+    <arg pos="3" type="int" name="iPlotY"/>
+  </event>
+  <event name="PlayerCanFoundPantheon" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+  </event>
+  <event name="PlayerCanFoundReligion" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+  </event>
+  <event name="PlayerCanGiftGold" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+  </event>
+  <event name="PlayerCanGiftImprovement" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+  </event>
+  <event name="PlayerCanGiftUnit" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+    <arg pos="3" type="int" name="iUnit"/>
+  </event>
+  <event name="PlayerCanHaveBelief" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="BeliefTypes" name="iBelief"/>
+  </event>
+  <event name="PlayerCanLiberate" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iOtherPlayer"/>
+  </event>
+  <event name="PlayerCanMakePeace" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="TeamTypes" name="iAgainstTeam"/>
+  </event>
+  <event name="PlayerCanPropose" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iResolution"/>
+    <arg pos="3" type="int" name="iChoice"/>
+    <arg pos="4" type="bool" name="bEnact"/>
+  </event>
+  <event name="PlayerCanProtect" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+  </event>
+  <event name="PlayerCanRaze" type="Any">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iCity"/>
+  </event>
+  <event name="PlayerCanRemoveHeresy" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="PlayerCanRevoke" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+  </event>
+  <event name="PlayerCanSpreadReligion" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="PlayerCanTransitMinorCity" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+    <arg pos="3" type="int" name="iCity"/>
+    <arg pos="4" type="int" name="iPlotX"/>
+    <arg pos="5" type="int" name="iPlotY"/>
+  </event>
+  <event name="PlayerEndTurnCompleted" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+  </event>
+  <event name="PlayerEndTurnInitiated" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+  </event>
+  <event name="PlayerGifted" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+    <arg pos="3" type="int" name="iGold"/>
+    <arg pos="4" type="UnitTypes" name="iUnitType"/>
+    <arg pos="5" type="int" name="iPlotX"/>
+    <arg pos="6" type="int" name="iPlotY"/>
+  </event>
+  <event name="PlayerGoldenAge" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="bool" name="bStart"/>
+    <arg pos="3" type="int" name="iTurns"/>
+  </event>
+  <event name="PlayerLiberated" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iOtherPlayer"/>
+    <arg pos="3" type="int" name="iCity"/>
+  </event>
+  <event name="PlayerPlunderedTradeRoute" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlunderedGold"/>
+    <arg pos="4" type="PlayerTypes" name="iFromPlayer"/>
+    <arg pos="5" type="int" name="iFromCity"/>
+    <arg pos="6" type="PlayerTypes" name="iToPlayer"/>
+    <arg pos="7" type="int" name="iToCity"/>
+    <arg pos="8" type="int" name="iRouteType"/>
+    <arg pos="9" type="DomainTypes" name="iRouteDomain"/>
+  </event>
+  <event name="PlayerProtected" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+  </event>
+  <event name="PlayerRevoked" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="PlayerTypes" name="iCS"/>
+    <arg pos="3" type="bool" name="bPledgeNowBroken"/>
+  </event>
+  <event name="PlotCanImprove" type="All">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="ImprovementTypes" name="iImprovement"/>
+  </event>
+  <event name="PushingMissionTo" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+    <arg pos="5" type="int" name="iData2"/>
+  </event>
+  <event name="RebaseTo" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iPlotX"/>
+    <arg pos="4" type="int" name="iPlotY"/>
+  </event>
+  <event name="ReligionCanHaveBelief" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="ReligionTypes" name="iReligion"/>
+    <arg pos="3" type="BeliefTypes" name="iBelief"/>
+  </event>
+  <event name="ReligionEnhanced" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="ReligionTypes" name="iReligion"/>
+    <arg pos="3" type="BeliefTypes" name="iBelief1"/>
+    <arg pos="4" type="BeliefTypes" name="iBelief2"/>
+  </event>
+  <event name="ReligionFounded" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iHolyCity"/>
+    <arg pos="3" type="ReligionTypes" name="iReligion"/>
+    <arg pos="4" type="BeliefTypes" name="iBelief1"/>
+    <arg pos="5" type="BeliefTypes" name="iBelief2"/>
+    <arg pos="6" type="BeliefTypes" name="iBelief3"/>
+    <arg pos="7" type="BeliefTypes" name="iBelief4"/>
+    <arg pos="8" type="BeliefTypes" name="iBelief5"/>
+  </event>
+  <event name="ReligionReformed" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="ReligionTypes" name="iReligion"/>
+    <arg pos="3" type="BeliefTypes" name="iBelief1"/>
+  </event>
+  <event name="ResolutionResult" type="Hook">
+    <arg pos="1" type="int" name="iResolution"/>
+    <arg pos="2" type="int" name="iChoice"/>
+    <arg pos="3" type="bool" name="bEnact"/>
+    <arg pos="4" type="bool" name="bPassed"/>
+  </event>
+  <event name="TeamSetEra" type="Hook">
+    <arg pos="1" type="TeamTypes" name="iTeam"/>
+    <arg pos="2" type="EraTypes" name="iEra"/>
+    <arg pos="3" type="bool" name="bFirst"/>
+  </event>
+  <event name="TerraformingMap" type="Hook">
+    <arg pos="1" type="int" name="iEvent"/>
+    <arg pos="2" type="int" name="iLoad"/>
+  </event>
+  <event name="TerraformingPlot" type="Hook">
+    <arg pos="1" type="int" name="iEvent"/>
+    <arg pos="2" type="int" name="iPlotX"/>
+    <arg pos="3" type="int" name="iPlotY"/>
+    <arg pos="4" type="int" name="iInfo"/>
+    <arg pos="5" type="int" name="iNewValue"/>
+    <arg pos="6" type="int" name="iOldValue"/>
+    <arg pos="7" type="int" name="iNewExtra"/>
+    <arg pos="8" type="int" name="iOldExtra"/>
+  </event>
+  <event name="TileFeatureChanged" type="Hook">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="PlayerTypes" name="iOwner"/>
+    <arg pos="4" type="FeatureTypes" name="iOldFeature"/>
+    <arg pos="5" type="FeatureTypes" name="iNewFeature"/>
+  </event>
+  <event name="TileImprovementChanged" type="Hook">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="PlayerTypes" name="iOwner"/>
+    <arg pos="4" type="ImprovementsTypes" name="iOldImprovement"/>
+    <arg pos="5" type="ImprovementsTypes" name="iNewImprovement"/>
+    <arg pos="6" type="bool" name="bPillaged"/>
+  </event>
+  <event name="TileOwnershipChanged" type="Hook">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="PlayerTypes" name="iOwner"/>
+    <arg pos="4" type="PlayerTypes" name="iOldOwner"/>
+  </event>
+  <event name="TileRevealed" type="Hook">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="TeamTypes" name="iTeam"/>
+    <arg pos="4" type="TeamTypes" name="iFromTeam"/>
+    <arg pos="5" type="bool" name="bFirst"/>
+  </event>
+  <event name="TileRouteChanged" type="Hook">
+    <arg pos="1" type="int" name="iPlotX"/>
+    <arg pos="2" type="int" name="iPlotY"/>
+    <arg pos="3" type="PlayerTypes" name="iOwner"/>
+    <arg pos="4" type="RouteTypes" name="iOldRoute"/>
+    <arg pos="5" type="RouteTypes" name="iNewRoute"/>
+    <arg pos="6" type="bool" name="bPillaged"/>
+  </event>
+  <event name="TurnComplete" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+  </event>
+  <event name="UiDiploEvent" type="Hook">
+    <arg pos="1" type="int" name="iEvent"/>
+    <arg pos="2" type="PlayerTypes" name="iAIPlayer"/>
+    <arg pos="3" type="int" name="iArg1"/>
+    <arg pos="4" type="int" name="iArg2"/>
+  </event>
+  <event name="UnitCanHaveAnyUpgrade" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+  </event>
+  <event name="UnitCanHaveGreatWork" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iGreatWork"/>
+  </event>
+  <event name="UnitCanHaveName" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="int" name="iName"/>
+  </event>
+  <event name="UnitCanHavePromotion" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="PromotionTypes" name="iPromotionType"/>
+  </event>
+  <event name="UnitCanHaveUpgrade" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="UnitClassTypes" name="iUnitClassType"/>
+    <arg pos="4" type="UnitTypes" name="iUnitType"/>
+  </event>
+  <event name="UnitCanTransitMinorCity" type="All">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="PlayerTypes" name="iCS"/>
+    <arg pos="4" type="int" name="iCity"/>
+    <arg pos="5" type="int" name="iPlotX"/>
+    <arg pos="6" type="int" name="iPlotY"/>
+  </event>
+  <event name="UnitCaptured" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iByPlayer"/>
+    <arg pos="2" type="int" name="iByUnit"/>
+    <arg pos="3" type="PlayerTypes" name="iCapturedPlayer"/>
+    <arg pos="4" type="int" name="iCapturedUnit"/>
+    <arg pos="5" type="bool" name="bWillBeKilled"/>
+    <arg pos="6" type="int" name="iReason"/>
+  </event>
+  <event name="UnitCaptureType" type="Acc">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="UnitTypes" name="iUnitType"/>
+    <arg pos="4" type="CivilizationTypes" name="iByCiv"/>
+  </event>
+  <event name="UnitCityFounded" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="UnitTypes" name="iUnitType"/>
+    <arg pos="4" type="int" name="iPlotX"/>
+    <arg pos="5" type="int" name="iPlotY"/>
+  </event>
+  <event name="UnitCreated" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="UnitTypes" name="iUnitType"/>
+    <arg pos="4" type="int" name="iPlotX"/>
+    <arg pos="5" type="int" name="iPlotY"/>
+  </event>
+  <event name="UnitPrekill" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="UnitTypes" name="iUnitType"/>
+    <arg pos="4" type="int" name="iPlotX"/>
+    <arg pos="5" type="int" name="iPlotY"/>
+    <arg pos="6" type="bool" name="bDelay"/>
+    <arg pos="7" type="PlayerTypes" name="iByPlayer"/>
+  </event>
+  <event name="UnitPromoted" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iUnit"/>
+    <arg pos="3" type="PromotionTypes" name="iPromotionType"/>
+  </event>
+  <event name="UnitUpgraded" type="Hook">
+    <arg pos="1" type="PlayerTypes" name="iPlayer"/>
+    <arg pos="2" type="int" name="iOldUnit"/>
+    <arg pos="3" type="int" name="iNewUnit"/>
+    <arg pos="4" type="bool" name="bGoodyHut"/>
+  </event>
+</events> 
